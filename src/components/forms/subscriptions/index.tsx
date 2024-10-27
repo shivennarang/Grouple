@@ -1,4 +1,3 @@
-
 "use client"
 
 import { SubscriptionCard } from "@/app/group/[groupid]/settings/subscriptions/_components/card"
@@ -12,48 +11,52 @@ import { useGroupSubscription } from "@/hooks/payment"
 import { Tag } from "lucide-react"
 
 type GroupSubscriptionFormProps = {
-  groupid: string
+    groupid: string
 }
 
 export const GroupSubscriptionForm = ({
-  groupid,
+    groupid,
 }: GroupSubscriptionFormProps) => {
-  const { onCreateNewSubscription, register, errors, isPending, variables } =
-    useGroupSubscription(groupid)
-  return (
-    <>
-      <GlassModal
-        trigger={
-          <span>
-            <Card className="flex rounded-xl text-themeGray gap-x-2 items-center cursor-pointer justify-center aspect-video border-dashed bg-themeBlack border-themeGray">
-              <Tag className="text-white" />
-              <p className="text-white">Add a price</p>
-            </Card>
-          </span>
-        }
-        title="Create a subscription"
-        description="Create a subscription plan for your grouple group"
-      >
-        <form
-          onSubmit={onCreateNewSubscription}
-          className="flex flex-col gap-y-3"
-        >
-          <FormGenerator
-            register={register}
-            errors={errors}
-            name="price"
-            inputType="input"
-            type="text"
-            placeholder="Add a price..."
-          />
-          <Button>
-            <Loader loading={isPending}>Create</Loader>
-          </Button>
-        </form>
-      </GlassModal>
-      {isPending && variables && (
-        <SubscriptionCard optimisitc price={`${variables.price}`} members="0" />
-      )}
-    </>
-  )
+    const { onCreateNewSubscription, register, errors, isPending, variables } =
+        useGroupSubscription(groupid)
+    return (
+        <>
+            <GlassModal
+                trigger={
+                    <span>
+                        <Card className="flex rounded-xl text-themeGray gap-x-2 items-center cursor-pointer justify-center aspect-video border-dashed bg-themeBlack border-themeGray">
+                            <Tag className="text-white" />
+                            <p className="text-white">Add a price</p>
+                        </Card>
+                    </span>
+                }
+                title="Create a subscription"
+                description="Create a subscription plan for your grouple group"
+            >
+                <form
+                    onSubmit={onCreateNewSubscription}
+                    className="flex flex-col gap-y-3"
+                >
+                    <FormGenerator
+                        register={register}
+                        errors={errors}
+                        name="price"
+                        inputType="input"
+                        type="text"
+                        placeholder="Add a price..."
+                    />
+                    <Button>
+                        <Loader loading={isPending}>Create</Loader>
+                    </Button>
+                </form>
+            </GlassModal>
+            {isPending && variables && (
+                <SubscriptionCard
+                    optimisitc
+                    price={`${variables.price}`}
+                    members="0"
+                />
+            )}
+        </>
+    )
 }

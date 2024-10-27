@@ -1,18 +1,18 @@
 import {
-  About,
-  Bell,
-  BriefCaseDuoToneBlack,
-  BriefCaseDuoToneWhite,
-  Compass,
-  FileDuoToneBlack,
-  FileDuoToneWhite,
-  GlobeDuoToneBlack,
-  Home,
-  HomeDuoToneWhite,
-  MegaPhoneDuoToneBlack,
-  MegaPhoneDuoToneWhite,
-  SocialMedia,
-  ZapDouToneBlack,
+    About,
+    Bell,
+    BriefCaseDuoToneBlack,
+    BriefCaseDuoToneWhite,
+    Compass,
+    FileDuoToneBlack,
+    FileDuoToneWhite,
+    GlobeDuoToneBlack,
+    Home,
+    HomeDuoToneWhite,
+    MegaPhoneDuoToneBlack,
+    MegaPhoneDuoToneWhite,
+    SocialMedia,
+    ZapDouToneBlack,
 } from "@/icons"
 
 type IconRendererProps = {
@@ -37,7 +37,11 @@ export const IconRenderer = ({ mode, icon }: IconRendererProps) => {
         case "bell":
             return mode === "DARK" ? <Bell /> : <Bell />
         case "case":
-            return mode === "DARK" ? <BriefCaseDuoToneBlack /> : <BriefCaseDuoToneWhite />
+            return mode === "DARK" ? (
+                <BriefCaseDuoToneBlack />
+            ) : (
+                <BriefCaseDuoToneWhite />
+            )
         case "compass":
             return mode === "DARK" ? <Compass /> : <Compass />
         case "media":
@@ -45,9 +49,17 @@ export const IconRenderer = ({ mode, icon }: IconRendererProps) => {
         case "zap":
             return mode === "DARK" ? <ZapDouToneBlack /> : <ZapDouToneBlack />
         case "mega":
-            return mode === "DARK" ? <MegaPhoneDuoToneBlack /> : <MegaPhoneDuoToneWhite />
+            return mode === "DARK" ? (
+                <MegaPhoneDuoToneBlack />
+            ) : (
+                <MegaPhoneDuoToneWhite />
+            )
         case "global":
-            return mode === "DARK" ? <GlobeDuoToneBlack /> : <GlobeDuoToneBlack />
+            return mode === "DARK" ? (
+                <GlobeDuoToneBlack />
+            ) : (
+                <GlobeDuoToneBlack />
+            )
         default:
             return <></>
     }

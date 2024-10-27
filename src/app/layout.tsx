@@ -33,9 +33,7 @@ export default function RootLayout({
                         </ReduxProvider>
                         <Toaster />
                     </ThemeProvider>
-                    
                 </body>
-                
             </html>
         </ClerkProvider>
     )
