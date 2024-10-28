@@ -63,8 +63,8 @@ export async function GET(req: NextRequest) {
         // Create Stripe Account Link for onboarding
         const accountLink = await stripe.accountLinks.create({
             account: account.id,
-
-            return_url: `http://localhost:3000/group/${groupid}/settings/integrations`,
+            refresh_url: `grouple-oe67.vercel.app/callback/stripe/refresh`,
+            return_url: `grouple-oe67.vercel.app/group/${groupid}/settings/integrations`,
             type: "account_onboarding",
         })
 
