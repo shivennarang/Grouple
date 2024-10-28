@@ -4,7 +4,7 @@ import { redirect } from "next/navigation"
 
 const CompleteOAuthAfterCallback = async () => {
     const user = await currentUser()
-    if (!user) redirect("/sign-in")
+    if (!user) redirect("/sign-up")
     const complete = await onSignUpUser({
         firstname: user.firstName as string,
         lastname: user.lastName as string,
