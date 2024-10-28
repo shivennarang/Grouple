@@ -18,10 +18,10 @@ const Affiliate = async ({ params }: Props) => {
                 </CardDescription>
                 <div className="mt-8 flex flex-col gap-y-2">
                     <div className="bg-black border-themeGray p-3 rounded-lg flex gap-x-5 items-center sm:flex flex-col justify-between text-center gap-y-3">
-                        http://localhost:3000/affiliates/
+                    https://grouple-oe67.vercel.app/
                         {affiliate.affiliate?.id}
                         <CopyButton
-                            content={`http://localhost:3000/affiliates/${affiliate.affiliate?.id}`}
+                            content={`https://grouple-oe67.vercel.app/affiliates/${affiliate.affiliate?.id}`}
                         />
                     </div>
                     <CardDescription className="text-themeTextGray">
