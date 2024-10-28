@@ -35,7 +35,7 @@ export const SimpleModal = ({
                         <div className="flex justify-center gap-3 ">
                             <div className="w-12 h-12 relative">
                                 <Image
-                                    src={`https://ucarecdn.com/${logo}`}
+                                    src={`https://ucarecdn.com/${logo}/`}
                                     fill
                                     alt="Corinna"
                                 />
