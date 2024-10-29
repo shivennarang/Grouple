@@ -45,23 +45,23 @@ export const PricingSection = (props: Props) => {
                     <p>Features</p>
                     <span className="flex gap-2 mt-3 items-center">
                         <Check />
-                        Feature number 1
+                        Custom Domain Support
                     </span>
                     <span className="flex gap-2 items-center">
                         <Check />
-                        Feature number 1
+                        Affiliate Marketing System
                     </span>
                     <span className="flex gap-2 items-center">
                         <Check />
-                        Feature number 1
+                        Unlimited Video Uploads
                     </span>
                     <span className="flex gap-2 items-center">
                         <Check />
-                        Feature number 1
+                        Member Chat Functionality
                     </span>
                     <span className="flex gap-2 items-center">
                         <Check />
-                        Feature number 1
+                        Intuitive User Dashboard
                     </span>
                 </div>
             </Card>
